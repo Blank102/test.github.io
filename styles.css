@@ -189,7 +189,7 @@
   .time {
 	position: absolute;
 	top: 120px;
-	right: calc(50% - 230px);
+	right: calc(50% - 220px);
   }
   
   #time-left {
