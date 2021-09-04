@@ -96,8 +96,8 @@
 	font-size: 45px;
 	position: absolute;
 	width: fit-content;
-	transform: translateX(-50%) rotate(-1deg);
-	left: 21.1pc;
+	transform: rotate(-1deg);
+	left: calc(50% - 245px);
 	top: -2px;
 	display: inline-block;
 	font-weight: bold;
