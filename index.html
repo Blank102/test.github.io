@@ -83,6 +83,10 @@ squares.forEach(square => {
       score.textContent = result
       hitPosition = null
     }
+    else {
+      result--
+      score.textContent = result
+    }
   })
 })
 
@@ -96,14 +100,24 @@ function countDown() {
  currentTime--
  timeLeft.textContent = currentTime
 
- if (currentTime == 0) {
+ if (currentTime == 0 && result <= 45) {
    clearInterval(countDownTimerId)
    clearInterval(timerId)
-   alert('GAME OVER! Your final score is ' + result)
+   alert('Game over, your final score is ' + result + '. Try harder')
  }
 
-}
+ else if (currentTime == 0 && result <= 80 && result > 45) {
+   clearInterval(countDownTimerId)
+   clearInterval(timerId)
+   alert('Game over, your final score is ' + result + '. Decentish!')
+ }
 
+ else if (currentTime == 0 && result >= 80) {
+  clearInterval(countDownTimerId)
+   clearInterval(timerId)
+   alert('Game over, your final score is ' + result + '. Impressive!!')
+ }
+}
 let countDownTimerId = setInterval(countDown, 1000)    
 </script>
 </body>
